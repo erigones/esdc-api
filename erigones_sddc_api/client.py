@@ -84,7 +84,7 @@ class Client(object):
             headers = self.headers.copy()
             del headers['ES-STREAM']
 
-        if method == 'GET':
+        if method.upper() == 'GET':
             data = None
         else:
             data = json.dumps(params)
