@@ -28,6 +28,8 @@ Usage
     >>> es = Client(api_url='https://my.erigones.com/api', api_key='<your-api-key>')
     >>> es.get('/vm').content
 
+Complete documentation is available at https://erigones.github.io/erigones-sddc-api/
+
 Links
 -----
 
