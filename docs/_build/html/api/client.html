@@ -1,0 +1,217 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>erigones_sddc_api.client &mdash; Erigones SDDC API 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/erigones.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/theme_extras.js"></script>
+    <link rel="top" title="Erigones SDDC API 1.0 documentation" href="../index.html" />
+    <link rel="up" title="API Reference" href="index.html" />
+    <link rel="next" title="erigones_sddc_api.response" href="response.html" />
+    <link rel="prev" title="API Reference" href="index.html" /> 
+  </head>
+  <body>
+      <div class="header">
+<div id="searchbox" class="hidden-phone">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Search" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div><h1 class="heading"><a href="../index.html"><span>Erigones SDDC API 1.0 documentation</span></a></h1>
+        <h2 class="heading"><span>erigones_sddc_api.client</span></h2>
+      </div>
+      <div class="topnav">
+      
+        <p>
+        <span class="hidden-phone">«&#160;&#160;<a href="index.html">API Reference</a>
+        &#160;&#160;::&#160;&#160;</span>
+        <a class="uplink" href="../index.html">contents</a>
+        <span class="hidden-phone">&#160;&#160;::&#160;&#160;
+        <a href="response.html">erigones_sddc_api.response</a>&#160;&#160;»</span>
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <span class="target" id="module-erigones_sddc_api.client"></span><div class="section" id="erigones-sddc-api-client">
+<h1>erigones_sddc_api.client<a class="headerlink" href="#erigones-sddc-api-client" title="Permalink to this headline">¶</a></h1>
+<p>This module contains the Erigones SDDC API <a class="reference internal" href="#erigones_sddc_api.client.Client" title="erigones_sddc_api.client.Client"><tt class="xref py py-class docutils literal"><span class="pre">Client</span></tt></a> class used to access the Erigones SDDC HTTP API.</p>
+<dl class="class">
+<dt id="erigones_sddc_api.client.Client">
+<em class="property">class </em><tt class="descclassname">erigones_sddc_api.client.</tt><tt class="descname">Client</tt><big>(</big><em>api_url='https://my.erigones.com/api'</em>, <em>api_key=None</em>, <em>auth=None</em>, <em>timeout=None</em>, <em>ssl_verify=True</em><big>)</big><a class="headerlink" href="#erigones_sddc_api.client.Client" title="Permalink to this definition">¶</a></dt>
+<dd><p>Erigones SDDC API HTTP client.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>api_url</strong> (<em>str</em>) &#8211; Erigones SDDC API base URL.</li>
+<li><strong>api_key</strong> (<em>str</em>) &#8211; Optional API key used to perform authenticated requests.</li>
+<li><strong>auth</strong> (<em>tuple</em>) &#8211; Optional auth tuple to enable Basic/Digest/Custom HTTP authentication.</li>
+<li><strong>timeout</strong> (<em>float</em>) &#8211; How long to wait for the server to send data before giving up (default: <cite>None</cite>).</li>
+<li><strong>ssl_verify</strong> (<em>bool</em>) &#8211; If <cite>True</cite>, the SSL cert will be verified (default: <cite>True</cite>).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="erigones_sddc_api.client.Client.create">
+<tt class="descname">create</tt><big>(</big><em>resource</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#erigones_sddc_api.client.Client.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for <a class="reference internal" href="#erigones_sddc_api.client.Client.post" title="erigones_sddc_api.client.Client.post"><tt class="xref py py-func docutils literal"><span class="pre">post()</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="erigones_sddc_api.client.Client.delete">
+<tt class="descname">delete</tt><big>(</big><em>resource</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#erigones_sddc_api.client.Client.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform DELETE <a class="reference internal" href="#erigones_sddc_api.client.Client.request" title="erigones_sddc_api.client.Client.request"><tt class="xref py py-func docutils literal"><span class="pre">request</span></tt></a> to Erigones SDDC API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="erigones_sddc_api.client.Client.get">
+<tt class="descname">get</tt><big>(</big><em>resource</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#erigones_sddc_api.client.Client.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform GET <a class="reference internal" href="#erigones_sddc_api.client.Client.request" title="erigones_sddc_api.client.Client.request"><tt class="xref py py-func docutils literal"><span class="pre">request</span></tt></a> to Erigones SDDC API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="erigones_sddc_api.client.Client.is_authenticated">
+<tt class="descname">is_authenticated</tt><big>(</big><big>)</big><a class="headerlink" href="#erigones_sddc_api.client.Client.is_authenticated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <cite>True</cite> if api_key is set or authorization token was saved by the <a class="reference internal" href="#erigones_sddc_api.client.Client.login" title="erigones_sddc_api.client.Client.login"><tt class="xref py py-func docutils literal"><span class="pre">login()</span></tt></a> method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="erigones_sddc_api.client.Client.login">
+<tt class="descname">login</tt><big>(</big><em>username</em>, <em>password</em><big>)</big><a class="headerlink" href="#erigones_sddc_api.client.Client.login" title="Permalink to this definition">¶</a></dt>
+<dd><p>Login to Erigones SDDC API (<a class="reference internal" href="#erigones_sddc_api.client.Client.post" title="erigones_sddc_api.client.Client.post"><tt class="xref py py-func docutils literal"><span class="pre">POST</span></tt></a> /accounts/login) using username and password.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>username</strong> (<em>str</em>) &#8211; Erigones SDDC username.</li>
+<li><strong>password</strong> (<em>str</em>) &#8211; Erigones SDDC password.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="erigones_sddc_api.client.Client.logout">
+<tt class="descname">logout</tt><big>(</big><big>)</big><a class="headerlink" href="#erigones_sddc_api.client.Client.logout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logout from Erigones SDDC API (<a class="reference internal" href="#erigones_sddc_api.client.Client.get" title="erigones_sddc_api.client.Client.get"><tt class="xref py py-func docutils literal"><span class="pre">GET</span></tt></a> /accounts/logout).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="erigones_sddc_api.client.Client.options">
+<tt class="descname">options</tt><big>(</big><em>resource</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#erigones_sddc_api.client.Client.options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform OPTIONS <a class="reference internal" href="#erigones_sddc_api.client.Client.request" title="erigones_sddc_api.client.Client.request"><tt class="xref py py-func docutils literal"><span class="pre">request</span></tt></a> to Erigones SDDC API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="erigones_sddc_api.client.Client.ping">
+<tt class="descname">ping</tt><big>(</big><big>)</big><a class="headerlink" href="#erigones_sddc_api.client.Client.ping" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#erigones_sddc_api.client.Client.get" title="erigones_sddc_api.client.Client.get"><tt class="xref py py-func docutils literal"><span class="pre">GET</span></tt></a> /ping</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="erigones_sddc_api.client.Client.post">
+<tt class="descname">post</tt><big>(</big><em>resource</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#erigones_sddc_api.client.Client.post" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform POST <a class="reference internal" href="#erigones_sddc_api.client.Client.request" title="erigones_sddc_api.client.Client.request"><tt class="xref py py-func docutils literal"><span class="pre">request</span></tt></a> to Erigones SDDC API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="erigones_sddc_api.client.Client.put">
+<tt class="descname">put</tt><big>(</big><em>resource</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#erigones_sddc_api.client.Client.put" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform PUT <a class="reference internal" href="#erigones_sddc_api.client.Client.request" title="erigones_sddc_api.client.Client.request"><tt class="xref py py-func docutils literal"><span class="pre">request</span></tt></a> to Erigones SDDC API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="erigones_sddc_api.client.Client.request">
+<tt class="descname">request</tt><big>(</big><em>method</em>, <em>resource</em>, <em>timeout=None</em>, <em>stream=True</em>, <em>**params</em><big>)</big><a class="headerlink" href="#erigones_sddc_api.client.Client.request" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Perform request to server and return <a class="reference internal" href="response.html#erigones_sddc_api.response.Response" title="erigones_sddc_api.response.Response"><tt class="xref py py-class docutils literal"><span class="pre">Response</span></tt></a> or</dt>
+<dd>raise an <a class="reference internal" href="exceptions.html#erigones_sddc_api.exceptions.ESAPIException" title="erigones_sddc_api.exceptions.ESAPIException"><tt class="xref py py-class docutils literal"><span class="pre">ESAPIException</span></tt></a>. This method is used by all public request methods in this class.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>method</strong> (<em>str</em>) &#8211; HTTP method.</li>
+<li><strong>resource</strong> (<em>str</em>) &#8211; Erigones SDDC API resource beginning with a slash (e.g. <cite>/vm/&lt;hostname&gt;</cite>).</li>
+<li><strong>timeout</strong> (<em>int</em>) &#8211; Optional timeout for the request (default <cite>None</cite>).</li>
+<li><strong>stream</strong> (<em>bool</em>) &#8211; Whether to wait for asynchronous API calls to finish (default <cite>True</cite>).</li>
+<li><strong>params</strong> (<em>dict</em>) &#8211; Request parameters internally translated into POST/PUT/DELETE JSON encoded data or
+GET query string.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Response object.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="response.html#erigones_sddc_api.response.Response" title="erigones_sddc_api.response.Response"><tt class="xref py py-class docutils literal"><span class="pre">Response</span></tt></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last"><a class="reference internal" href="exceptions.html#erigones_sddc_api.exceptions.ESAPIException" title="erigones_sddc_api.exceptions.ESAPIException"><tt class="xref py py-class docutils literal"><span class="pre">ESAPIException</span></tt></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="erigones_sddc_api.client.Client.set">
+<tt class="descname">set</tt><big>(</big><em>resource</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#erigones_sddc_api.client.Client.set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for <a class="reference internal" href="#erigones_sddc_api.client.Client.put" title="erigones_sddc_api.client.Client.put"><tt class="xref py py-func docutils literal"><span class="pre">put()</span></tt></a>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+      </div>
+      <div class="bottomnav">
+      
+        <p>
+        <span class="hidden-phone">«&#160;&#160;<a href="index.html">API Reference</a>
+        &#160;&#160;::&#160;&#160;</span>
+        <a class="uplink" href="../index.html">contents</a>
+        <span class="hidden-phone">&#160;&#160;::&#160;&#160;
+        <a href="response.html">erigones_sddc_api.response</a>&#160;&#160;»</span>
+        </p>
+
+      </div>
+
+    <div class="footer">
+        &copy; Copyright 2015, Erigones, s. r. o..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
