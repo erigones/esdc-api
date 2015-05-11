@@ -87,14 +87,17 @@ class Response(object):
         :param raw_content: Last item yielded by :func:`fetch_raw_content`.
         :return: :class:`.ESAPIError` or :class:`.Content`.
         """
+        assert isinstance(raw_content, bytes), 'Raw content must be an instance of bytes'
+
         task_id = self.task_id
         task_status = detail = None
+        raw_content = raw_content.decode('utf-8')
 
         # noinspection PyBroadException
         try:
             content = json.loads(raw_content)
         except:
-            content = raw_content.decode('utf-8')
+            content = raw_content
         else:
             if isinstance(content, dict):
                 task_status = content.get('status', None)
