@@ -25,13 +25,6 @@ class Client(object):
     :param float timeout: How long to wait for the server to send data before giving up (default: `None`).
     :param bool ssl_verify: If `True`, the SSL cert will be verified (default: `True`).
     """
-    headers = {
-        'User-Agent': 'Erigones-SDDC-API/python-client/%s' % __version__,
-        'Accept': 'application/json; indent=4',
-        'Content-Type': 'application/json; indent=4',
-        'ES-STREAM': 'es',
-    }
-
     def __init__(self, api_url='https://my.erigones.com/api', api_key=None, auth=None, timeout=None, ssl_verify=True):
         """Initialize Erigones SDDC API object."""
         assert not api_url.endswith('/'), 'trailing slash in api_url is not allowed'
@@ -40,6 +33,12 @@ class Client(object):
         self.auth = auth
         self.timeout = timeout
         self.ssl_verify = ssl_verify
+        self.headers = {
+            'User-Agent': 'Erigones-SDDC-API/python-client/%s' % __version__,
+            'Accept': 'application/json; indent=4',
+            'Content-Type': 'application/json; indent=4',
+            'ES-STREAM': 'es',
+        }
 
         if api_key:
             self.headers['ES-API-KEY'] = api_key
