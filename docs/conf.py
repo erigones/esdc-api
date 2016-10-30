@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Erigones SDDC API documentation build configuration file, created by
+# Danube Cloud API documentation build configuration file, created by
 # sphinx-quickstart on Mon May  4 14:04:49 2015.
 #
 # This file is execfile()d with the current directory set to its
@@ -48,8 +48,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Erigones SDDC API'
-copyright = u'2015, Erigones, s. r. o.'
+project = u'Danube Cloud API'
+copyright = u'2015 - 2016, Erigones, s. r. o.'
 author = u'Erigones, s. r. o.'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -202,7 +202,7 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'ErigonesSDDCAPIdoc'
+htmlhelp_basename = 'DanubeCloudAPIdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -224,7 +224,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'ErigonesSDDCAPI.tex', u'Erigones SDDC API Python Library Documentation',
+  (master_doc, 'DanubeCloudAPI.tex', u'Danube Cloud API Python Library Documentation',
    u'Erigones, s. r. o.', 'manual'),
 ]
 
@@ -254,7 +254,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'erigonessddcapi', u'Erigones SDDC API Python Library Documentation',
+    (master_doc, 'esdc-api', u'Danube Cloud API Python Library Documentation',
      [author], 1)
 ]
 
@@ -268,8 +268,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'ErigonesSDDCAPI', u'Erigones SDDC API Python Library Documentation',
-   author, 'ErigonesSDDCAPI', 'Erigones SDDC API Python Library.',
+  (master_doc, 'DanubeCloudAPI', u'Danube Cloud API Python Library Documentation',
+   author, 'DanubeCloudAPI', 'Danube Cloud API Python Library.',
    'Miscellaneous'),
 ]
 

@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# Erigones SDDC API Python Library
+# Danube Cloud API Python Library
 #
-# Copyright (c) 2015 Erigones, s. r. o.
+# Copyright (c) 2015-2016 Erigones, s. r. o.
 #
 # License: BSD (see LICENSE for details)
 
@@ -14,7 +14,7 @@ try:
 except ImportError:
     from distutils.core import setup
 
-from erigones_sddc_api import __version__
+from esdc_api import __version__
 
 read = lambda f: open(os.path.join(os.path.dirname(__file__), f)).read()
 
@@ -36,15 +36,15 @@ CLASSIFIERS = [
 ]
 
 setup(
-    name='erigones-sddc-api',
+    name='esdc-api',
     version=__version__,
-    description='Erigones SDDC API Python Library',
+    description='Danube Cloud API Python Library',
     long_description=read('README.rst'),
-    url='https://github.com/erigones/erigones-sddc-api/',
+    url='https://github.com/erigones/esdc-api/',
     author='Erigones',
     author_email='erigones [at] erigones.com',
     license='BSD',
-    packages=('erigones_sddc_api',),
+    packages=('esdc_api',),
     requires=DEPS,
     platforms='any',
     classifiers=CLASSIFIERS,

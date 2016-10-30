@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-erigones_sddc_api.response
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+esdc_api.response
+~~~~~~~~~~~~~~~~~
 
-This module provides the Response object returned by Erigones SDDC API :class:`.Client` request methods.
+This module provides the Response object returned by Danube Cloud API :class:`.Client` request methods.
 """
 
 import json
@@ -11,15 +11,18 @@ from collections import namedtuple
 
 from .exceptions import ESAPIRuntimeError, ServerError, ClientError, TaskError, TaskFailure, TaskRevoked
 
-__all__ = ('Response', 'Content')
+__all__ = (
+    'Response',
+    'Content'
+)
 
-#: Erigones SDDC API Response content tuple returned by :attr:`.Response.content` property.
+#: Danube Cloud API Response content tuple returned by :attr:`.Response.content` property.
 Content = namedtuple('Content', ('result', 'dc', 'task_status', 'task_id'))
 
 
 class Response(object):
     """
-    Erigones SDDC API Response (wrapper around :class:`requests.Response <requests.Response>` class).
+    Danube Cloud API Response (wrapper around :class:`requests.Response <requests.Response>` class).
 
     :param response: The :class:`requests.Response <requests.Response>` object.
     """
@@ -30,7 +33,7 @@ class Response(object):
         self._raw_content = None
         self._status_code = None
         headers = response.headers
-        #: Erigones SDDC API version.
+        #: Danube Cloud API version.
         self.version = headers.get('es_version', '???')
         self.task_id = headers.get('es_task_id', None)
         self.stream = headers.get('es_stream', None)  # Only set for stream responses
@@ -44,7 +47,7 @@ class Response(object):
         return self.__dict__
 
     def __repr__(self):
-        return '<Erigones SDDC API :: %s [%s]>' % (self.__class__.__name__, self.status_code)
+        return '<Danube Cloud API :: %s [%s]>' % (self.__class__.__name__, self.status_code)
 
     def __bool__(self):
         return self.ok
@@ -67,7 +70,7 @@ class Response(object):
 
     @staticmethod
     def _get_exception(status_code, task_status, task_response):
-        """Return Erigones SDDC API exception class according to status_code (and other parameters)."""
+        """Return Danube Cloud API exception class according to status_code (and other parameters)."""
         if status_code >= 500:
             return ServerError
 

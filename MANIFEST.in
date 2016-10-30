@@ -2,4 +2,4 @@ include README.rst
 include LICENSE
 include MANIFEST.in
 include setup.py
-recursive-include erigones_sddc_api *.py
+recursive-include esdc_api *.py

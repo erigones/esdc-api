@@ -1,2 +1,2 @@
-.. automodule:: erigones_sddc_api.response
+.. automodule:: esdc_api.response
     :members:

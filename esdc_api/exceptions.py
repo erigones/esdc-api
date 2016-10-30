@@ -1,23 +1,31 @@
 # -*- coding: utf-8 -*-
 """
-erigones_sddc_api.exceptions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+esdc_api.exceptions
+~~~~~~~~~~~~~~~~~~~
 
-This module contains all exceptions used by the Erigones SDDC API library.
+This module contains all exceptions used by the Danube Cloud API library.
 """
 
-__all__ = ('ESAPIException', 'ESAPIRuntimeError', 'ESAPIError',
-           'ServerError', 'ClientError', 'TaskError', 'TaskFailure', 'TaskRevoked')
+__all__ = (
+    'ESAPIException',
+    'ESAPIRuntimeError',
+    'ESAPIError',
+    'ServerError',
+    'ClientError',
+    'TaskError',
+    'TaskFailure',
+    'TaskRevoked'
+)
 
 
 class ESAPIException(Exception):
-    """Erigones SDDC API base exception."""
+    """Danube Cloud API base exception."""
     def __repr__(self):
-        return '<Erigones SDDC API :: %s>' % self.__class__.__name__
+        return '<Danube Cloud API :: %s>' % self.__class__.__name__
 
 
 class ESAPIRuntimeError(ESAPIException, RuntimeError):
-    """Erigones SDDC API HTTP client errors.
+    """Danube Cloud API HTTP client errors.
 
     Can be raised during HTTP content fetching and parsing.
     """
@@ -25,11 +33,11 @@ class ESAPIRuntimeError(ESAPIException, RuntimeError):
 
 
 class ESAPIError(ESAPIException):
-    """Raised for all API errors incoming from Erigones SDDC server.
+    """Raised for all API errors incoming from Danube Cloud server.
 
     :param status_code: HTTP response status code.
     :param detail: Detailed information about the API error.
-    :param dc: Erigones SDDC virtual datacenter in which the error occurred.
+    :param dc: Danube Cloud virtual datacenter in which the error occurred.
     :param task_status: Task status (optional).
     :param task_id: Task ID (optional).
     """
@@ -49,26 +57,26 @@ class ESAPIError(ESAPIException):
         super(ESAPIError, self).__init__(status_code)
 
     def __repr__(self):
-        return '<Erigones SDDC API :: %s [%s]>' % (self.__class__.__name__, self.status_code)
+        return '<Danube Cloud API :: %s [%s]>' % (self.__class__.__name__, self.status_code)
 
     def __str__(self):
         return 'Error %s: %s' % (self.status_code, self.detail)
 
 
 class ServerError(ESAPIError):
-    """Erigones SDDC API 5xx server errors."""
+    """Danube Cloud API 5xx server errors."""
     def __str__(self):
         return 'Server Error %s: %s' % (self.status_code, self.detail)
 
 
 class ClientError(ESAPIError):
-    """Erigones SDDC API 4xx errors."""
+    """Danube Cloud API 4xx errors."""
     def __str__(self):
         return 'Client Error %s: %s' % (self.status_code, self.detail)
 
 
 class TaskError(ESAPIError):
-    """Base class for all Erigones SDDC task errors."""
+    """Base class for all Danube Cloud task errors."""
     def __str__(self):
         return 'Task Error %s: %s' % (self.status_code, self.detail)
 

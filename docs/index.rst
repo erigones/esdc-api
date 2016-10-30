@@ -1,6 +1,6 @@
-================================
-Erigones SDDC API Python Library
-================================
+===============================
+Danube Cloud API Python Library
+===============================
 
 .. toctree::
     readme

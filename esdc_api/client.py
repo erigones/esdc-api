@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-erigones_sddc_api.client
-~~~~~~~~~~~~~~~~~~~~~~~~
+esdc_api.client
+~~~~~~~~~~~~~~~
 
-This module contains the Erigones SDDC API :class:`Client` class used to access the Erigones SDDC HTTP API.
+This module contains the Danube Cloud API :class:`Client` class used to access the Danube Cloud HTTP API.
 """
 
 import json
@@ -12,21 +12,23 @@ import requests
 from . import __version__
 from .response import Response
 
-__all__ = ('Client',)
+__all__ = (
+    'Client',
+)
 
 
 class Client(object):
     """
-    Erigones SDDC API HTTP client.
+    Danube Cloud API HTTP client.
 
-    :param str api_url: Erigones SDDC API base URL.
+    :param str api_url: Danube Cloud API base URL.
     :param str api_key: Optional API key used to perform authenticated requests.
     :param tuple auth: Optional auth tuple to enable Basic/Digest/Custom HTTP authentication.
     :param float timeout: How long to wait for the server to send data before giving up (default: `None`).
     :param bool ssl_verify: If `True`, the SSL cert will be verified (default: `True`).
     """
-    def __init__(self, api_url='https://my.erigones.com/api', api_key=None, auth=None, timeout=None, ssl_verify=True):
-        """Initialize Erigones SDDC API object."""
+    def __init__(self, api_url='https://danube.cloud/api', api_key=None, auth=None, timeout=None, ssl_verify=True):
+        """Initialize Danube Cloud API object."""
         assert not api_url.endswith('/'), 'trailing slash in api_url is not allowed'
 
         self.api_url = api_url
@@ -34,7 +36,7 @@ class Client(object):
         self.timeout = timeout
         self.ssl_verify = ssl_verify
         self.headers = {
-            'User-Agent': 'Erigones-SDDC-API/python-client/%s' % __version__,
+            'User-Agent': 'esdc-api/python-client/%s' % __version__,
             'Accept': 'application/json; indent=4',
             'Content-Type': 'application/json; indent=4',
             'ES-STREAM': 'es',
@@ -44,7 +46,7 @@ class Client(object):
             self.headers['ES-API-KEY'] = api_key
 
     def __repr__(self):
-        return '<Erigones SDDC API :: %s [%s]>' % (self.__class__.__name__, self.api_url)
+        return '<Danube Cloud API :: %s [%s]>' % (self.__class__.__name__, self.api_url)
 
     def _get_request_url(self, resource):
         """Return complete URL send to the server."""
@@ -62,7 +64,7 @@ class Client(object):
          raise an :class:`.ESAPIException`. This method is used by all public request methods in this class.
 
         :param str method: HTTP method.
-        :param str resource: Erigones SDDC API resource beginning with a slash (e.g. `/vm/<hostname>`).
+        :param str resource: Danube Cloud API resource beginning with a slash (e.g. `/vm/<hostname>`).
         :param int timeout: Optional timeout for the request (default `None`).
         :param bool stream: Whether to wait for asynchronous API calls to finish (default `True`).
         :param dict params: Request parameters internally translated into POST/PUT/DELETE JSON encoded data or
@@ -94,11 +96,11 @@ class Client(object):
                                          stream=stream, verify=self.ssl_verify))
 
     def get(self, resource, **kwargs):
-        """Perform GET :func:`request <request>` to Erigones SDDC API."""
+        """Perform GET :func:`request <request>` to Danube Cloud API."""
         return self.request('GET', resource, **kwargs)
 
     def post(self, resource, **kwargs):
-        """Perform POST :func:`request <request>` to Erigones SDDC API."""
+        """Perform POST :func:`request <request>` to Danube Cloud API."""
         return self.request('POST', resource, **kwargs)
 
     def create(self, resource, **kwargs):
@@ -106,7 +108,7 @@ class Client(object):
         return self.post(resource, **kwargs)
 
     def put(self, resource, **kwargs):
-        """Perform PUT :func:`request <request>` to Erigones SDDC API."""
+        """Perform PUT :func:`request <request>` to Danube Cloud API."""
         return self.request('PUT', resource, **kwargs)
 
     def set(self, resource, **kwargs):
@@ -114,15 +116,15 @@ class Client(object):
         return self.put(resource, **kwargs)
 
     def delete(self, resource, **kwargs):
-        """Perform DELETE :func:`request <request>` to Erigones SDDC API."""
+        """Perform DELETE :func:`request <request>` to Danube Cloud API."""
         return self.request('DELETE', resource, **kwargs)
 
     def options(self, resource, **kwargs):
-        """Perform OPTIONS :func:`request <request>` to Erigones SDDC API."""
+        """Perform OPTIONS :func:`request <request>` to Danube Cloud API."""
         return self.request('OPTIONS', resource, **kwargs)
 
     def logout(self):
-        """Logout from Erigones SDDC API (:func:`GET <get>` /accounts/logout)."""
+        """Logout from Danube Cloud API (:func:`GET <get>` /accounts/logout)."""
         response = self.get('/accounts/logout')
 
         if response.ok:
@@ -131,10 +133,10 @@ class Client(object):
         return response
 
     def login(self, username, password):
-        """Login to Erigones SDDC API (:func:`POST <post>` /accounts/login) using username and password.
+        """Login to Danube Cloud API (:func:`POST <post>` /accounts/login) using username and password.
 
-        :param str username: Erigones SDDC username.
-        :param str password: Erigones SDDC password.
+        :param str username: Danube Cloud username.
+        :param str password: Danube Cloud password.
         """
         self.headers.pop('Authorization', None)
         response = self.post('/accounts/login', username=username, password=password)

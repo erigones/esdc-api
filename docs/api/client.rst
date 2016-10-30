@@ -1,2 +1,2 @@
-.. automodule:: erigones_sddc_api.client
+.. automodule:: esdc_api.client
     :members:
