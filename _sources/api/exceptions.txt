@@ -1,3 +1,3 @@
-.. automodule:: erigones_sddc_api.exceptions
+.. automodule:: esdc_api.exceptions
     :members:
     :show-inheritance:

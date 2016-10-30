@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Erigones SDDC API &mdash; Erigones SDDC API 1.0 documentation</title>
+    <title>Danube Cloud API &#8212; Danube Cloud API 1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/erigones.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -25,11 +25,13 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/theme_extras.js"></script>
-    <link rel="top" title="Erigones SDDC API 1.0 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="Danube Cloud API 1.0 documentation" href="index.html" />
     <link rel="next" title="API Reference" href="api/index.html" />
-    <link rel="prev" title="Erigones SDDC API Python Library" href="index.html" /> 
+    <link rel="prev" title="Danube Cloud API Python Library" href="index.html" /> 
   </head>
-  <body>
+  <body role="document">
       <div class="header">
 <div id="searchbox" class="hidden-phone">
   <h3>Quick search</h3>
@@ -39,13 +41,13 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-</div><h1 class="heading"><a href="index.html"><span>Erigones SDDC API 1.0 documentation</span></a></h1>
-        <h2 class="heading"><span>Erigones SDDC API</span></h2>
+</div><h1 class="heading"><a href="index.html"><span>Danube Cloud API 1.0 documentation</span></a></h1>
+        <h2 class="heading"><span>Danube Cloud API</span></h2>
       </div>
       <div class="topnav">
       
         <p>
-        <span class="hidden-phone">«&#160;&#160;<a href="index.html">Erigones SDDC API Python Library</a>
+        <span class="hidden-phone">«&#160;&#160;<a href="index.html">Danube Cloud API Python Library</a>
         &#160;&#160;::&#160;&#160;</span>
         <a class="uplink" href="index.html">contents</a>
         <span class="hidden-phone">&#160;&#160;::&#160;&#160;
@@ -56,16 +58,16 @@
       <div class="content">
         
         
-  <div class="section" id="erigones-sddc-api">
-<h1>Erigones SDDC API<a class="headerlink" href="#erigones-sddc-api" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://www.erigones.com/erigones-sddc/">Erigones SDDC API</a> Python Library.</p>
+  <div class="section" id="danube-cloud-api">
+<h1>Danube Cloud API<a class="headerlink" href="#danube-cloud-api" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://danubecloud.org/">Danube Cloud API</a> Python Library.</p>
 <ul class="simple">
 <li>Supported Python versions: &gt;= 2.6 and &gt;= 3.2</li>
 </ul>
-<a class="reference external image-reference" href="http://badge.fury.io/py/erigones-sddc-api"><img alt="https://badge.fury.io/py/erigones-sddc-api.png" src="https://badge.fury.io/py/erigones-sddc-api.png" /></a>
+<a class="reference external image-reference" href="http://badge.fury.io/py/esdc-api"><img alt="https://badge.fury.io/py/esdc-api.png" src="https://badge.fury.io/py/esdc-api.png" /></a>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<div class="code bash highlight-python"><div class="highlight"><pre>pip install erigones-sddc-api
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">esdc</span><span class="o">-</span><span class="n">api</span>
 </pre></div>
 </div>
 <p><strong>Dependencies:</strong></p>
@@ -75,19 +77,19 @@
 </div>
 <div class="section" id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
-<div class="code python highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">erigones_sddc_api</span> <span class="kn">import</span> <span class="n">Client</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">es</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">api_url</span><span class="o">=</span><span class="s">&#39;https://my.erigones.com/api&#39;</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="s">&#39;&lt;your-api-key&gt;&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">es</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;/vm&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">content</span>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">esdc_api</span> <span class="k">import</span> <span class="n">Client</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">es</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">api_url</span><span class="o">=</span><span class="s1">&#39;https://danube.cloud/api&#39;</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="s1">&#39;&lt;your-api-key&gt;&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">es</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/vm&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">content</span>
 </pre></div>
 </div>
-<p>Complete documentation is available at <a class="reference external" href="https://erigones.github.io/erigones-sddc-api/">https://erigones.github.io/erigones-sddc-api/</a></p>
+<p>Complete documentation is available at <a class="reference external" href="https://erigones.github.io/esdc-api/">https://erigones.github.io/esdc-api/</a></p>
 </div>
 <div class="section" id="links">
 <h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Erigones SDDC: <a class="reference external" href="http://www.erigones.com/erigones-sddc/">http://www.erigones.com/erigones-sddc/</a></li>
-<li>Erigones SDDC API Documentation: <a class="reference external" href="https://my.erigones.com/docs/api/">https://my.erigones.com/docs/api/</a></li>
-<li>Bug Tracker: <a class="reference external" href="https://github.com/erigones/erigones-sddc-api/issues">https://github.com/erigones/erigones-sddc-api/issues</a></li>
+<li>Danube Cloud: <a class="reference external" href="https://danubecloud.com">https://danubecloud.com</a></li>
+<li>Danube Cloud API Documentation: <a class="reference external" href="https://docs.danubecloud.org/api/">https://docs.danubecloud.org/api/</a></li>
+<li>Bug Tracker: <a class="reference external" href="https://github.com/erigones/esdc-api/issues">https://github.com/erigones/esdc-api/issues</a></li>
 <li>Twitter: <a class="reference external" href="https://twitter.com/erigones">https://twitter.com/erigones</a></li>
 </ul>
 </div>
@@ -98,7 +100,7 @@
       <div class="bottomnav">
       
         <p>
-        <span class="hidden-phone">«&#160;&#160;<a href="index.html">Erigones SDDC API Python Library</a>
+        <span class="hidden-phone">«&#160;&#160;<a href="index.html">Danube Cloud API Python Library</a>
         &#160;&#160;::&#160;&#160;</span>
         <a class="uplink" href="index.html">contents</a>
         <span class="hidden-phone">&#160;&#160;::&#160;&#160;
@@ -107,9 +109,9 @@
 
       </div>
 
-    <div class="footer">
-        &copy; Copyright 2015, Erigones, s. r. o..
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2015 - 2016, Erigones, s. r. o..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
     </div>
   </body>
 </html>

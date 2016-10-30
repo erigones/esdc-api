@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>erigones_sddc_api.response &mdash; Erigones SDDC API 1.0 documentation</title>
+    <title>esdc_api.response &#8212; Danube Cloud API 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/erigones.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -25,12 +25,14 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/theme_extras.js"></script>
-    <link rel="top" title="Erigones SDDC API 1.0 documentation" href="../index.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Danube Cloud API 1.0 documentation" href="../index.html" />
     <link rel="up" title="API Reference" href="index.html" />
-    <link rel="next" title="erigones_sddc_api.exceptions" href="exceptions.html" />
-    <link rel="prev" title="erigones_sddc_api.client" href="client.html" /> 
+    <link rel="next" title="esdc_api.exceptions" href="exceptions.html" />
+    <link rel="prev" title="esdc_api.client" href="client.html" /> 
   </head>
-  <body>
+  <body role="document">
       <div class="header">
 <div id="searchbox" class="hidden-phone">
   <h3>Quick search</h3>
@@ -40,42 +42,42 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-</div><h1 class="heading"><a href="../index.html"><span>Erigones SDDC API 1.0 documentation</span></a></h1>
-        <h2 class="heading"><span>erigones_sddc_api.response</span></h2>
+</div><h1 class="heading"><a href="../index.html"><span>Danube Cloud API 1.0 documentation</span></a></h1>
+        <h2 class="heading"><span>esdc_api.response</span></h2>
       </div>
       <div class="topnav">
       
         <p>
-        <span class="hidden-phone">«&#160;&#160;<a href="client.html">erigones_sddc_api.client</a>
+        <span class="hidden-phone">«&#160;&#160;<a href="client.html">esdc_api.client</a>
         &#160;&#160;::&#160;&#160;</span>
         <a class="uplink" href="../index.html">contents</a>
         <span class="hidden-phone">&#160;&#160;::&#160;&#160;
-        <a href="exceptions.html">erigones_sddc_api.exceptions</a>&#160;&#160;»</span>
+        <a href="exceptions.html">esdc_api.exceptions</a>&#160;&#160;»</span>
         </p>
 
       </div>
       <div class="content">
         
         
-  <span class="target" id="module-erigones_sddc_api.response"></span><div class="section" id="erigones-sddc-api-response">
-<h1>erigones_sddc_api.response<a class="headerlink" href="#erigones-sddc-api-response" title="Permalink to this headline">¶</a></h1>
-<p>This module provides the Response object returned by Erigones SDDC API <a class="reference internal" href="client.html#erigones_sddc_api.client.Client" title="erigones_sddc_api.client.Client"><tt class="xref py py-class docutils literal"><span class="pre">Client</span></tt></a> request methods.</p>
+  <span class="target" id="module-esdc_api.response"></span><div class="section" id="esdc-api-response">
+<h1>esdc_api.response<a class="headerlink" href="#esdc-api-response" title="Permalink to this headline">¶</a></h1>
+<p>This module provides the Response object returned by Danube Cloud API <a class="reference internal" href="client.html#esdc_api.client.Client" title="esdc_api.client.Client"><code class="xref py py-class docutils literal"><span class="pre">Client</span></code></a> request methods.</p>
 <dl class="class">
-<dt id="erigones_sddc_api.response.Response">
-<em class="property">class </em><tt class="descclassname">erigones_sddc_api.response.</tt><tt class="descname">Response</tt><big>(</big><em>response</em><big>)</big><a class="headerlink" href="#erigones_sddc_api.response.Response" title="Permalink to this definition">¶</a></dt>
-<dd><p>Erigones SDDC API Response (wrapper around <tt class="xref py py-class docutils literal"><span class="pre">requests.Response</span></tt> class).</p>
+<dt id="esdc_api.response.Response">
+<em class="property">class </em><code class="descclassname">esdc_api.response.</code><code class="descname">Response</code><span class="sig-paren">(</span><em>response</em><span class="sig-paren">)</span><a class="headerlink" href="#esdc_api.response.Response" title="Permalink to this definition">¶</a></dt>
+<dd><p>Danube Cloud API Response (wrapper around <code class="xref py py-class docutils literal"><span class="pre">requests.Response</span></code> class).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>response</strong> &#8211; The <tt class="xref py py-class docutils literal"><span class="pre">requests.Response</span></tt> object.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>response</strong> &#8211; The <code class="xref py py-class docutils literal"><span class="pre">requests.Response</span></code> object.</td>
 </tr>
 </tbody>
 </table>
 <dl class="method">
-<dt id="erigones_sddc_api.response.Response.consume_raw_content">
-<tt class="descname">consume_raw_content</tt><big>(</big><big>)</big><a class="headerlink" href="#erigones_sddc_api.response.Response.consume_raw_content" title="Permalink to this definition">¶</a></dt>
-<dd><p>Iterate over the generator returned by <a class="reference internal" href="#erigones_sddc_api.response.Response.fetch_raw_content" title="erigones_sddc_api.response.Response.fetch_raw_content"><tt class="xref py py-func docutils literal"><span class="pre">fetch_raw_content()</span></tt></a> and return the last item - the raw content.</p>
+<dt id="esdc_api.response.Response.consume_raw_content">
+<code class="descname">consume_raw_content</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#esdc_api.response.Response.consume_raw_content" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterate over the generator returned by <a class="reference internal" href="#esdc_api.response.Response.fetch_raw_content" title="esdc_api.response.Response.fetch_raw_content"><code class="xref py py-func docutils literal"><span class="pre">fetch_raw_content()</span></code></a> and return the last item - the raw content.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -89,26 +91,26 @@
 </dd></dl>
 
 <dl class="attribute">
-<dt id="erigones_sddc_api.response.Response.content">
-<tt class="descname">content</tt><a class="headerlink" href="#erigones_sddc_api.response.Response.content" title="Permalink to this definition">¶</a></dt>
+<dt id="esdc_api.response.Response.content">
+<code class="descname">content</code><a class="headerlink" href="#esdc_api.response.Response.content" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parse raw content and return a content tuple.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Content namedtuple with <a class="reference internal" href="#erigones_sddc_api.response.Content.result" title="erigones_sddc_api.response.Content.result"><tt class="xref py py-attr docutils literal"><span class="pre">Content.result</span></tt></a> attribute.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Content namedtuple with <a class="reference internal" href="#esdc_api.response.Content.result" title="esdc_api.response.Content.result"><code class="xref py py-attr docutils literal"><span class="pre">Content.result</span></code></a> attribute.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#erigones_sddc_api.response.Content" title="erigones_sddc_api.response.Content"><tt class="xref py py-class docutils literal"><span class="pre">Content</span></tt></a></td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#esdc_api.response.Content" title="esdc_api.response.Content"><code class="xref py py-class docutils literal"><span class="pre">Content</span></code></a></td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><a class="reference internal" href="exceptions.html#erigones_sddc_api.exceptions.ESAPIError" title="erigones_sddc_api.exceptions.ESAPIError"><tt class="xref py py-class docutils literal"><span class="pre">ESAPIError</span></tt></a></td>
+<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><a class="reference internal" href="exceptions.html#esdc_api.exceptions.ESAPIError" title="esdc_api.exceptions.ESAPIError"><code class="xref py py-class docutils literal"><span class="pre">ESAPIError</span></code></a></td>
 </tr>
 </tbody>
 </table>
 </dd></dl>
 
 <dl class="method">
-<dt id="erigones_sddc_api.response.Response.fetch_raw_content">
-<tt class="descname">fetch_raw_content</tt><big>(</big><big>)</big><a class="headerlink" href="#erigones_sddc_api.response.Response.fetch_raw_content" title="Permalink to this definition">¶</a></dt>
+<dt id="esdc_api.response.Response.fetch_raw_content">
+<code class="descname">fetch_raw_content</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#esdc_api.response.Response.fetch_raw_content" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch content from the server and yield <cite>None</cite> while waiting for some data.
 The last yielded item is always the raw content (<cite>bytes</cite>).</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -124,14 +126,14 @@ The last yielded item is always the raw content (<cite>bytes</cite>).</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="erigones_sddc_api.response.Response.headers">
-<tt class="descname">headers</tt><a class="headerlink" href="#erigones_sddc_api.response.Response.headers" title="Permalink to this definition">¶</a></dt>
+<dt id="esdc_api.response.Response.headers">
+<code class="descname">headers</code><a class="headerlink" href="#esdc_api.response.Response.headers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the response headers.</p>
 </dd></dl>
 
 <dl class="staticmethod">
-<dt id="erigones_sddc_api.response.Response.is_status_code_ok">
-<em class="property">static </em><tt class="descname">is_status_code_ok</tt><big>(</big><em>status_code</em><big>)</big><a class="headerlink" href="#erigones_sddc_api.response.Response.is_status_code_ok" title="Permalink to this definition">¶</a></dt>
+<dt id="esdc_api.response.Response.is_status_code_ok">
+<em class="property">static </em><code class="descname">is_status_code_ok</code><span class="sig-paren">(</span><em>status_code</em><span class="sig-paren">)</span><a class="headerlink" href="#esdc_api.response.Response.is_status_code_ok" title="Permalink to this definition">¶</a></dt>
 <dd><p>Helper method for checking the HTTP status code.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -148,14 +150,14 @@ The last yielded item is always the raw content (<cite>bytes</cite>).</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="erigones_sddc_api.response.Response.method">
-<tt class="descname">method</tt><a class="headerlink" href="#erigones_sddc_api.response.Response.method" title="Permalink to this definition">¶</a></dt>
+<dt id="esdc_api.response.Response.method">
+<code class="descname">method</code><a class="headerlink" href="#esdc_api.response.Response.method" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the request method.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="erigones_sddc_api.response.Response.ok">
-<tt class="descname">ok</tt><a class="headerlink" href="#erigones_sddc_api.response.Response.ok" title="Permalink to this definition">¶</a></dt>
+<dt id="esdc_api.response.Response.ok">
+<code class="descname">ok</code><a class="headerlink" href="#esdc_api.response.Response.ok" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return <cite>True</cite> if response status code is &lt; 400. Also fetch the raw content if needed.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -170,25 +172,25 @@ The last yielded item is always the raw content (<cite>bytes</cite>).</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="erigones_sddc_api.response.Response.parse_raw_content">
-<tt class="descname">parse_raw_content</tt><big>(</big><em>raw_content</em><big>)</big><a class="headerlink" href="#erigones_sddc_api.response.Response.parse_raw_content" title="Permalink to this definition">¶</a></dt>
+<dt id="esdc_api.response.Response.parse_raw_content">
+<code class="descname">parse_raw_content</code><span class="sig-paren">(</span><em>raw_content</em><span class="sig-paren">)</span><a class="headerlink" href="#esdc_api.response.Response.parse_raw_content" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parse raw content and return content tuple or API error exception (without raising it).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>raw_content</strong> &#8211; Last item yielded by <a class="reference internal" href="#erigones_sddc_api.response.Response.fetch_raw_content" title="erigones_sddc_api.response.Response.fetch_raw_content"><tt class="xref py py-func docutils literal"><span class="pre">fetch_raw_content()</span></tt></a>.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>raw_content</strong> &#8211; Last item yielded by <a class="reference internal" href="#esdc_api.response.Response.fetch_raw_content" title="esdc_api.response.Response.fetch_raw_content"><code class="xref py py-func docutils literal"><span class="pre">fetch_raw_content()</span></code></a>.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference internal" href="exceptions.html#erigones_sddc_api.exceptions.ESAPIError" title="erigones_sddc_api.exceptions.ESAPIError"><tt class="xref py py-class docutils literal"><span class="pre">ESAPIError</span></tt></a> or <a class="reference internal" href="#erigones_sddc_api.response.Content" title="erigones_sddc_api.response.Content"><tt class="xref py py-class docutils literal"><span class="pre">Content</span></tt></a>.</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference internal" href="exceptions.html#esdc_api.exceptions.ESAPIError" title="esdc_api.exceptions.ESAPIError"><code class="xref py py-class docutils literal"><span class="pre">ESAPIError</span></code></a> or <a class="reference internal" href="#esdc_api.response.Content" title="esdc_api.response.Content"><code class="xref py py-class docutils literal"><span class="pre">Content</span></code></a>.</td>
 </tr>
 </tbody>
 </table>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="erigones_sddc_api.response.Response.raw_content">
-<tt class="descname">raw_content</tt><a class="headerlink" href="#erigones_sddc_api.response.Response.raw_content" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return raw content. Fetch and cache it by using <a class="reference internal" href="#erigones_sddc_api.response.Response.consume_raw_content" title="erigones_sddc_api.response.Response.consume_raw_content"><tt class="xref py py-func docutils literal"><span class="pre">consume_raw_content()</span></tt></a>; if not already consumed.</p>
+<dt id="esdc_api.response.Response.raw_content">
+<code class="descname">raw_content</code><a class="headerlink" href="#esdc_api.response.Response.raw_content" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return raw content. Fetch and cache it by using <a class="reference internal" href="#esdc_api.response.Response.consume_raw_content" title="esdc_api.response.Response.consume_raw_content"><code class="xref py py-func docutils literal"><span class="pre">consume_raw_content()</span></code></a>; if not already consumed.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -202,8 +204,8 @@ The last yielded item is always the raw content (<cite>bytes</cite>).</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="erigones_sddc_api.response.Response.ready">
-<tt class="descname">ready</tt><a class="headerlink" href="#erigones_sddc_api.response.Response.ready" title="Permalink to this definition">¶</a></dt>
+<dt id="esdc_api.response.Response.ready">
+<code class="descname">ready</code><a class="headerlink" href="#esdc_api.response.Response.ready" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicate whether raw content was already consumed from server.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -218,8 +220,8 @@ The last yielded item is always the raw content (<cite>bytes</cite>).</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="erigones_sddc_api.response.Response.status_code">
-<tt class="descname">status_code</tt><a class="headerlink" href="#erigones_sddc_api.response.Response.status_code" title="Permalink to this definition">¶</a></dt>
+<dt id="esdc_api.response.Response.status_code">
+<code class="descname">status_code</code><a class="headerlink" href="#esdc_api.response.Response.status_code" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return HTTP status code of this response.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -234,44 +236,44 @@ The last yielded item is always the raw content (<cite>bytes</cite>).</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="erigones_sddc_api.response.Response.url">
-<tt class="descname">url</tt><a class="headerlink" href="#erigones_sddc_api.response.Response.url" title="Permalink to this definition">¶</a></dt>
+<dt id="esdc_api.response.Response.url">
+<code class="descname">url</code><a class="headerlink" href="#esdc_api.response.Response.url" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the request URL.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="erigones_sddc_api.response.Response.version">
-<tt class="descname">version</tt><em class="property"> = None</em><a class="headerlink" href="#erigones_sddc_api.response.Response.version" title="Permalink to this definition">¶</a></dt>
-<dd><p>Erigones SDDC API version.</p>
+<dt id="esdc_api.response.Response.version">
+<code class="descname">version</code><em class="property"> = None</em><a class="headerlink" href="#esdc_api.response.Response.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Danube Cloud API version.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="class">
-<dt id="erigones_sddc_api.response.Content">
-<em class="property">class </em><tt class="descclassname">erigones_sddc_api.response.</tt><tt class="descname">Content</tt><a class="headerlink" href="#erigones_sddc_api.response.Content" title="Permalink to this definition">¶</a></dt>
-<dd><p>Erigones SDDC API Response content tuple returned by <a class="reference internal" href="#erigones_sddc_api.response.Response.content" title="erigones_sddc_api.response.Response.content"><tt class="xref py py-attr docutils literal"><span class="pre">Response.content</span></tt></a> property.</p>
+<dt id="esdc_api.response.Content">
+<em class="property">class </em><code class="descclassname">esdc_api.response.</code><code class="descname">Content</code><span class="sig-paren">(</span><em>result</em>, <em>dc</em>, <em>task_status</em>, <em>task_id</em><span class="sig-paren">)</span><a class="headerlink" href="#esdc_api.response.Content" title="Permalink to this definition">¶</a></dt>
+<dd><p>Danube Cloud API Response content tuple returned by <a class="reference internal" href="#esdc_api.response.Response.content" title="esdc_api.response.Response.content"><code class="xref py py-attr docutils literal"><span class="pre">Response.content</span></code></a> property.</p>
 <dl class="attribute">
-<dt id="erigones_sddc_api.response.Content.dc">
-<tt class="descname">dc</tt><a class="headerlink" href="#erigones_sddc_api.response.Content.dc" title="Permalink to this definition">¶</a></dt>
+<dt id="esdc_api.response.Content.dc">
+<code class="descname">dc</code><a class="headerlink" href="#esdc_api.response.Content.dc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 1</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="erigones_sddc_api.response.Content.result">
-<tt class="descname">result</tt><a class="headerlink" href="#erigones_sddc_api.response.Content.result" title="Permalink to this definition">¶</a></dt>
+<dt id="esdc_api.response.Content.result">
+<code class="descname">result</code><a class="headerlink" href="#esdc_api.response.Content.result" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 0</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="erigones_sddc_api.response.Content.task_id">
-<tt class="descname">task_id</tt><a class="headerlink" href="#erigones_sddc_api.response.Content.task_id" title="Permalink to this definition">¶</a></dt>
+<dt id="esdc_api.response.Content.task_id">
+<code class="descname">task_id</code><a class="headerlink" href="#esdc_api.response.Content.task_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 3</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="erigones_sddc_api.response.Content.task_status">
-<tt class="descname">task_status</tt><a class="headerlink" href="#erigones_sddc_api.response.Content.task_status" title="Permalink to this definition">¶</a></dt>
+<dt id="esdc_api.response.Content.task_status">
+<code class="descname">task_status</code><a class="headerlink" href="#esdc_api.response.Content.task_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 2</p>
 </dd></dl>
 
@@ -284,18 +286,18 @@ The last yielded item is always the raw content (<cite>bytes</cite>).</p>
       <div class="bottomnav">
       
         <p>
-        <span class="hidden-phone">«&#160;&#160;<a href="client.html">erigones_sddc_api.client</a>
+        <span class="hidden-phone">«&#160;&#160;<a href="client.html">esdc_api.client</a>
         &#160;&#160;::&#160;&#160;</span>
         <a class="uplink" href="../index.html">contents</a>
         <span class="hidden-phone">&#160;&#160;::&#160;&#160;
-        <a href="exceptions.html">erigones_sddc_api.exceptions</a>&#160;&#160;»</span>
+        <a href="exceptions.html">esdc_api.exceptions</a>&#160;&#160;»</span>
         </p>
 
       </div>
 
-    <div class="footer">
-        &copy; Copyright 2015, Erigones, s. r. o..
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2015 - 2016, Erigones, s. r. o..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
     </div>
   </body>
 </html>

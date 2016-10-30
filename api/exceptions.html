@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>erigones_sddc_api.exceptions &mdash; Erigones SDDC API 1.0 documentation</title>
+    <title>esdc_api.exceptions &#8212; Danube Cloud API 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/erigones.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -25,11 +25,13 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/theme_extras.js"></script>
-    <link rel="top" title="Erigones SDDC API 1.0 documentation" href="../index.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Danube Cloud API 1.0 documentation" href="../index.html" />
     <link rel="up" title="API Reference" href="index.html" />
-    <link rel="prev" title="erigones_sddc_api.response" href="response.html" /> 
+    <link rel="prev" title="esdc_api.response" href="response.html" /> 
   </head>
-  <body>
+  <body role="document">
       <div class="header">
 <div id="searchbox" class="hidden-phone">
   <h3>Quick search</h3>
@@ -39,13 +41,13 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-</div><h1 class="heading"><a href="../index.html"><span>Erigones SDDC API 1.0 documentation</span></a></h1>
-        <h2 class="heading"><span>erigones_sddc_api.exceptions</span></h2>
+</div><h1 class="heading"><a href="../index.html"><span>Danube Cloud API 1.0 documentation</span></a></h1>
+        <h2 class="heading"><span>esdc_api.exceptions</span></h2>
       </div>
       <div class="topnav">
       
         <p>
-        <span class="hidden-phone">«&#160;&#160;<a href="response.html">erigones_sddc_api.response</a>
+        <span class="hidden-phone">«&#160;&#160;<a href="response.html">esdc_api.response</a>
         &#160;&#160;::&#160;&#160;</span>
         <a class="uplink" href="../index.html">contents</a>
         </p>
@@ -54,29 +56,29 @@
       <div class="content">
         
         
-  <span class="target" id="module-erigones_sddc_api.exceptions"></span><div class="section" id="erigones-sddc-api-exceptions">
-<h1>erigones_sddc_api.exceptions<a class="headerlink" href="#erigones-sddc-api-exceptions" title="Permalink to this headline">¶</a></h1>
-<p>This module contains all exceptions used by the Erigones SDDC API library.</p>
+  <span class="target" id="module-esdc_api.exceptions"></span><div class="section" id="esdc-api-exceptions">
+<h1>esdc_api.exceptions<a class="headerlink" href="#esdc-api-exceptions" title="Permalink to this headline">¶</a></h1>
+<p>This module contains all exceptions used by the Danube Cloud API library.</p>
 <dl class="exception">
-<dt id="erigones_sddc_api.exceptions.ESAPIException">
-<em class="property">exception </em><tt class="descclassname">erigones_sddc_api.exceptions.</tt><tt class="descname">ESAPIException</tt><a class="headerlink" href="#erigones_sddc_api.exceptions.ESAPIException" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">exceptions.Exception</span></tt></p>
-<p>Erigones SDDC API base exception.</p>
+<dt id="esdc_api.exceptions.ESAPIException">
+<em class="property">exception </em><code class="descclassname">esdc_api.exceptions.</code><code class="descname">ESAPIException</code><a class="headerlink" href="#esdc_api.exceptions.ESAPIException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">exceptions.Exception</span></code></p>
+<p>Danube Cloud API base exception.</p>
 </dd></dl>
 
 <dl class="exception">
-<dt id="erigones_sddc_api.exceptions.ESAPIRuntimeError">
-<em class="property">exception </em><tt class="descclassname">erigones_sddc_api.exceptions.</tt><tt class="descname">ESAPIRuntimeError</tt><a class="headerlink" href="#erigones_sddc_api.exceptions.ESAPIRuntimeError" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#erigones_sddc_api.exceptions.ESAPIException" title="erigones_sddc_api.exceptions.ESAPIException"><tt class="xref py py-class docutils literal"><span class="pre">erigones_sddc_api.exceptions.ESAPIException</span></tt></a>, <tt class="xref py py-class docutils literal"><span class="pre">exceptions.RuntimeError</span></tt></p>
-<p>Erigones SDDC API HTTP client errors.</p>
+<dt id="esdc_api.exceptions.ESAPIRuntimeError">
+<em class="property">exception </em><code class="descclassname">esdc_api.exceptions.</code><code class="descname">ESAPIRuntimeError</code><a class="headerlink" href="#esdc_api.exceptions.ESAPIRuntimeError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#esdc_api.exceptions.ESAPIException" title="esdc_api.exceptions.ESAPIException"><code class="xref py py-class docutils literal"><span class="pre">esdc_api.exceptions.ESAPIException</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">exceptions.RuntimeError</span></code></p>
+<p>Danube Cloud API HTTP client errors.</p>
 <p>Can be raised during HTTP content fetching and parsing.</p>
 </dd></dl>
 
 <dl class="exception">
-<dt id="erigones_sddc_api.exceptions.ESAPIError">
-<em class="property">exception </em><tt class="descclassname">erigones_sddc_api.exceptions.</tt><tt class="descname">ESAPIError</tt><big>(</big><em>status_code</em>, <em>detail</em>, <em>dc</em>, <em>task_status=None</em>, <em>task_id=None</em><big>)</big><a class="headerlink" href="#erigones_sddc_api.exceptions.ESAPIError" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#erigones_sddc_api.exceptions.ESAPIException" title="erigones_sddc_api.exceptions.ESAPIException"><tt class="xref py py-class docutils literal"><span class="pre">erigones_sddc_api.exceptions.ESAPIException</span></tt></a></p>
-<p>Raised for all API errors incoming from Erigones SDDC server.</p>
+<dt id="esdc_api.exceptions.ESAPIError">
+<em class="property">exception </em><code class="descclassname">esdc_api.exceptions.</code><code class="descname">ESAPIError</code><span class="sig-paren">(</span><em>status_code</em>, <em>detail</em>, <em>dc</em>, <em>task_status=None</em>, <em>task_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#esdc_api.exceptions.ESAPIError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#esdc_api.exceptions.ESAPIException" title="esdc_api.exceptions.ESAPIException"><code class="xref py py-class docutils literal"><span class="pre">esdc_api.exceptions.ESAPIException</span></code></a></p>
+<p>Raised for all API errors incoming from Danube Cloud server.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -84,7 +86,7 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>status_code</strong> &#8211; HTTP response status code.</li>
 <li><strong>detail</strong> &#8211; Detailed information about the API error.</li>
-<li><strong>dc</strong> &#8211; Erigones SDDC virtual datacenter in which the error occurred.</li>
+<li><strong>dc</strong> &#8211; Danube Cloud virtual datacenter in which the error occurred.</li>
 <li><strong>task_status</strong> &#8211; Task status (optional).</li>
 <li><strong>task_id</strong> &#8211; Task ID (optional).</li>
 </ul>
@@ -95,40 +97,40 @@
 </dd></dl>
 
 <dl class="exception">
-<dt id="erigones_sddc_api.exceptions.ServerError">
-<em class="property">exception </em><tt class="descclassname">erigones_sddc_api.exceptions.</tt><tt class="descname">ServerError</tt><big>(</big><em>status_code</em>, <em>detail</em>, <em>dc</em>, <em>task_status=None</em>, <em>task_id=None</em><big>)</big><a class="headerlink" href="#erigones_sddc_api.exceptions.ServerError" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#erigones_sddc_api.exceptions.ESAPIError" title="erigones_sddc_api.exceptions.ESAPIError"><tt class="xref py py-class docutils literal"><span class="pre">erigones_sddc_api.exceptions.ESAPIError</span></tt></a></p>
-<p>Erigones SDDC API 5xx server errors.</p>
+<dt id="esdc_api.exceptions.ServerError">
+<em class="property">exception </em><code class="descclassname">esdc_api.exceptions.</code><code class="descname">ServerError</code><span class="sig-paren">(</span><em>status_code</em>, <em>detail</em>, <em>dc</em>, <em>task_status=None</em>, <em>task_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#esdc_api.exceptions.ServerError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#esdc_api.exceptions.ESAPIError" title="esdc_api.exceptions.ESAPIError"><code class="xref py py-class docutils literal"><span class="pre">esdc_api.exceptions.ESAPIError</span></code></a></p>
+<p>Danube Cloud API 5xx server errors.</p>
 </dd></dl>
 
 <dl class="exception">
-<dt id="erigones_sddc_api.exceptions.ClientError">
-<em class="property">exception </em><tt class="descclassname">erigones_sddc_api.exceptions.</tt><tt class="descname">ClientError</tt><big>(</big><em>status_code</em>, <em>detail</em>, <em>dc</em>, <em>task_status=None</em>, <em>task_id=None</em><big>)</big><a class="headerlink" href="#erigones_sddc_api.exceptions.ClientError" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#erigones_sddc_api.exceptions.ESAPIError" title="erigones_sddc_api.exceptions.ESAPIError"><tt class="xref py py-class docutils literal"><span class="pre">erigones_sddc_api.exceptions.ESAPIError</span></tt></a></p>
-<p>Erigones SDDC API 4xx errors.</p>
+<dt id="esdc_api.exceptions.ClientError">
+<em class="property">exception </em><code class="descclassname">esdc_api.exceptions.</code><code class="descname">ClientError</code><span class="sig-paren">(</span><em>status_code</em>, <em>detail</em>, <em>dc</em>, <em>task_status=None</em>, <em>task_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#esdc_api.exceptions.ClientError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#esdc_api.exceptions.ESAPIError" title="esdc_api.exceptions.ESAPIError"><code class="xref py py-class docutils literal"><span class="pre">esdc_api.exceptions.ESAPIError</span></code></a></p>
+<p>Danube Cloud API 4xx errors.</p>
 </dd></dl>
 
 <dl class="exception">
-<dt id="erigones_sddc_api.exceptions.TaskError">
-<em class="property">exception </em><tt class="descclassname">erigones_sddc_api.exceptions.</tt><tt class="descname">TaskError</tt><big>(</big><em>status_code</em>, <em>detail</em>, <em>dc</em>, <em>task_status=None</em>, <em>task_id=None</em><big>)</big><a class="headerlink" href="#erigones_sddc_api.exceptions.TaskError" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#erigones_sddc_api.exceptions.ESAPIError" title="erigones_sddc_api.exceptions.ESAPIError"><tt class="xref py py-class docutils literal"><span class="pre">erigones_sddc_api.exceptions.ESAPIError</span></tt></a></p>
-<p>Base class for all Erigones SDDC task errors.</p>
+<dt id="esdc_api.exceptions.TaskError">
+<em class="property">exception </em><code class="descclassname">esdc_api.exceptions.</code><code class="descname">TaskError</code><span class="sig-paren">(</span><em>status_code</em>, <em>detail</em>, <em>dc</em>, <em>task_status=None</em>, <em>task_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#esdc_api.exceptions.TaskError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#esdc_api.exceptions.ESAPIError" title="esdc_api.exceptions.ESAPIError"><code class="xref py py-class docutils literal"><span class="pre">esdc_api.exceptions.ESAPIError</span></code></a></p>
+<p>Base class for all Danube Cloud task errors.</p>
 </dd></dl>
 
 <dl class="exception">
-<dt id="erigones_sddc_api.exceptions.TaskFailure">
-<em class="property">exception </em><tt class="descclassname">erigones_sddc_api.exceptions.</tt><tt class="descname">TaskFailure</tt><big>(</big><em>status_code</em>, <em>detail</em>, <em>dc</em>, <em>task_status=None</em>, <em>task_id=None</em><big>)</big><a class="headerlink" href="#erigones_sddc_api.exceptions.TaskFailure" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#erigones_sddc_api.exceptions.TaskError" title="erigones_sddc_api.exceptions.TaskError"><tt class="xref py py-class docutils literal"><span class="pre">erigones_sddc_api.exceptions.TaskError</span></tt></a></p>
+<dt id="esdc_api.exceptions.TaskFailure">
+<em class="property">exception </em><code class="descclassname">esdc_api.exceptions.</code><code class="descname">TaskFailure</code><span class="sig-paren">(</span><em>status_code</em>, <em>detail</em>, <em>dc</em>, <em>task_status=None</em>, <em>task_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#esdc_api.exceptions.TaskFailure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#esdc_api.exceptions.TaskError" title="esdc_api.exceptions.TaskError"><code class="xref py py-class docutils literal"><span class="pre">esdc_api.exceptions.TaskError</span></code></a></p>
 <p>The task has failed.</p>
-<p>The <tt class="xref py py-attr docutils literal"><span class="pre">detail</span></tt> attribute will contain details about the failure.</p>
+<p>The <code class="xref py py-attr docutils literal"><span class="pre">detail</span></code> attribute will contain details about the failure.</p>
 </dd></dl>
 
 <dl class="exception">
-<dt id="erigones_sddc_api.exceptions.TaskRevoked">
-<em class="property">exception </em><tt class="descclassname">erigones_sddc_api.exceptions.</tt><tt class="descname">TaskRevoked</tt><big>(</big><em>status_code</em>, <em>detail</em>, <em>dc</em>, <em>task_status=None</em>, <em>task_id=None</em><big>)</big><a class="headerlink" href="#erigones_sddc_api.exceptions.TaskRevoked" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#erigones_sddc_api.exceptions.TaskError" title="erigones_sddc_api.exceptions.TaskError"><tt class="xref py py-class docutils literal"><span class="pre">erigones_sddc_api.exceptions.TaskError</span></tt></a></p>
+<dt id="esdc_api.exceptions.TaskRevoked">
+<em class="property">exception </em><code class="descclassname">esdc_api.exceptions.</code><code class="descname">TaskRevoked</code><span class="sig-paren">(</span><em>status_code</em>, <em>detail</em>, <em>dc</em>, <em>task_status=None</em>, <em>task_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#esdc_api.exceptions.TaskRevoked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#esdc_api.exceptions.TaskError" title="esdc_api.exceptions.TaskError"><code class="xref py py-class docutils literal"><span class="pre">esdc_api.exceptions.TaskError</span></code></a></p>
 <p>The task has been revoked.</p>
-<p>The <tt class="xref py py-attr docutils literal"><span class="pre">detail</span></tt> attribute will contain the revocation reason.</p>
+<p>The <code class="xref py py-attr docutils literal"><span class="pre">detail</span></code> attribute will contain the revocation reason.</p>
 </dd></dl>
 
 </div>
@@ -138,16 +140,16 @@
       <div class="bottomnav">
       
         <p>
-        <span class="hidden-phone">«&#160;&#160;<a href="response.html">erigones_sddc_api.response</a>
+        <span class="hidden-phone">«&#160;&#160;<a href="response.html">esdc_api.response</a>
         &#160;&#160;::&#160;&#160;</span>
         <a class="uplink" href="../index.html">contents</a>
         </p>
 
       </div>
 
-    <div class="footer">
-        &copy; Copyright 2015, Erigones, s. r. o..
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2015 - 2016, Erigones, s. r. o..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
     </div>
   </body>
 </html>
