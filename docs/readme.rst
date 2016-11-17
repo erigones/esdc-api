@@ -34,7 +34,9 @@ Links
 -----
 
 - Danube Cloud: https://danubecloud.com
-- Danube Cloud API Documentation: https://docs.danubecloud.org/api/
+- Danube Cloud API Documentation: https://docs.danubecloud.org/api-reference/
 - Bug Tracker: https://github.com/erigones/esdc-api/issues
 - Twitter: https://twitter.com/danubecloud
+- Mailing list: `danubecloud@googlegroups.com <danubecloud+subscribe@googlegroups.com>`__
+- IRC: `irc.freenode.net#danubecloud <https://webchat.freenode.net/#danubecloud>`__
 
