@@ -14,8 +14,6 @@ try:
 except ImportError:
     from distutils.core import setup
 
-from esdc_api import __version__
-
 read = lambda f: open(os.path.join(os.path.dirname(__file__), f)).read()
 
 DEPS = ['requests']
@@ -37,7 +35,7 @@ CLASSIFIERS = [
 
 setup(
     name='esdc-api',
-    version=__version__,
+    version='2.0.1',
     description='Danube Cloud API Python Library',
     long_description=read('README.rst'),
     url='https://github.com/erigones/esdc-api/',
