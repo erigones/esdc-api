@@ -37,6 +37,6 @@ Links
 - Danube Cloud API Documentation: https://docs.danubecloud.org/api-reference/
 - Bug Tracker: https://github.com/erigones/esdc-api/issues
 - Twitter: https://twitter.com/danubecloud
-- Forum (Q&A): https://qa.danubecloud.org
+- Gitter: https://gitter.im/erigones/DanubeCloud
 - IRC: `irc.freenode.net#danubecloud <https://webchat.freenode.net/#danubecloud>`__
 
